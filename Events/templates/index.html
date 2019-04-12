@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Events</h1>
+    <div class="row">
+            {% for event in events %}
+
+        <div class="col">
+                <div class="card" style="width: 18rem;">
+                <img src="{{event.image_url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{event.name}}</h5>
+                    <p class="card-text">{{event.description}}</p>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+
+            </div>
+        </div>
+                {% endfor %}
+
+    </div>
+    <!--<ul>-->
+        <!--<l1>-->
+            <!--Name: {{event.name}}-->
+            <!--Description: {{event.description}}-->
+            <!--Rating: {{event.rating}}-->
+        <!--</l1>-->
+        <!--<br>-->
+    <!--</ul>-->
+
+{% endblock %}

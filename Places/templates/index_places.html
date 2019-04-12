@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Places</h1>
+    <div class="row">
+            {% for place in places %}
+
+        <div class="col">
+                <div class="card" style="width: 18rem;">
+                <img src="{{place.image_url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{place.name}}</h5>
+                    <p class="card-text">{{place.description}}</p>
+                    <a href="{{place.name}}" class="btn btn-primary">Details</a>
+                </div>
+
+            </div>
+        </div>
+                {% endfor %}
+
+    </div>
+    <!--<ul>-->
+        <!--<l1>-->
+            <!--Name: {{event.name}}-->
+            <!--Description: {{event.description}}-->
+            <!--Rating: {{event.rating}}-->
+        <!--</l1>-->
+        <!--<br>-->
+    <!--</ul>-->
+
+{% endblock %}
