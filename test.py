@@ -1,4 +1,4 @@
-from scrape import eventbrite
+from .scrape import e
 
 eventsresults()
 
